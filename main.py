@@ -15,5 +15,5 @@ while prompt != 'off':
         register.report()
     elif prompt != "off":
         drink = menu.find_drink(prompt)
-        if coffee_machine.is_resource_sufficient(drink) and register.make_payment(drink.cost):
+        if drink != None and coffee_machine.is_resource_sufficient(drink) and register.make_payment(drink.cost):
             coffee_machine.make_coffee(drink)
